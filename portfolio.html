@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    html, body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    #navbar {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        background-color: #be3144;
+        padding-right: 20px;
+    }
+    #navbar > ul {
+        display: flex;
+        margin: 0;
+        list-style: none;
+        justify-content: flex-end;
+    }
+    #navbar > ul > li > a {
+        display: inline-block;
+        padding: 20px;
+        font-size: 1.4em;
+        color: white;
+        text-decoration: none;
+    }
+    #navbar > ul > li :hover {
+        background-color: #45567d;
+    } 
+    #welcome-section {
+        padding-top: 50px;
+        height: 100%;
+        width: 100%;
+        background-color: black;
+        background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #welcome-section > h1 {
+        color: white;
+        font-size: 3em;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+    }
+    #welcome-section > p {
+        color: #be3144;
+        font-size: 1.5rem;
+        font-style: italic;
+        font-weight: 200;
+    }
+    #projects {
+        background-color: #45567d;
+        width: 100%;
+        max-width: 1280px;
+        padding-top: 20px;
+        height: 100%;
+        margin: 0;
+    }
+    #projects > h1 {
+        margin: 60px auto 40px auto;
+        padding: 5px;
+        max-width: 640px;
+        color: white;
+        font-size: 2.5em;
+        text-align: center;
+        border-bottom: 0.2rem solid #f0f0f0;
+    }
+    #grid {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 2rem;
+    }
+    .project-image {
+        width: 100%;
+    }
+    .project-tile > a > p {
+        color: #f0f0f0;
+        font-size: 1.5em;
+        text-decoration: none;
+        text-align: center;
+    }
+    #profile-link {
+        height: 100%;
+        background-color: #303841;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #profile-link > h1 {
+        margin: 0;
+        color: #f0f0f0;
+        font-size: 3em;
+        text-align: center;
+    }
+    #profile-link > p {
+        color: #f0f0f0;
+        font-size: 1.2em;
+        text-align: center;
+        font-style: italic;
+        font-weight: 200;
+    }
+    #profile-link > a {
+        color: #f0f0f0;
+        font-size: 1.5em;
+        text-decoration: none;
+        text-align: center;
+    }
+    #profile-link > a > img {
+        width: 30px;
+    }
+    @media  (max-width: 700px) {
+        #navbar {
+            visibility: hidden;
+        }
+        #projects {
+            height: auto;
+        }
+        #grid {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .project-tile {
+            margin: 10px;
+        }
+    }
+</style>
+<body>
+    <nav id="navbar">
+        <ul>
+            <li><a href="#welcome-section">About</a></li>
+            <li><a href="#projects">Work</a></li>
+            <li><a href="#profile-link">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="welcome-section">
+        <h1>Hey I am Kungfu Tsang</h1>
+        <p>a web developing learner</p>
+    </section>
+    <section id="projects">
+        <h1>These are some of my projects</h1>
+        <div id="grid">
+            <div class="project-tile">
+                <a href="https://codepen.io/shen30000/pen/vYpjKgG" target="_blank">
+                    <img class="project-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg" alt="project">
+                    <p>Tribute Page</p>
+                </a>
+            </div>
+            <div class="project-tile">
+                <a href="https://codepen.io/shen30000/pen/wvpjgaJ" target="_blank">
+                    <img class="project-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg" alt="project">
+                    <p>Survey Form</p>
+                </a>
+            </div>
+            <div class="project-tile">
+                <a href="https://codepen.io/shen30000/pen/mdpQaXd" target="_blank">
+                    <img class="project-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg" alt="project">
+                    <p>Trombone</p>
+                </a>
+            </div>
+            <div class="project-tile">
+                <a href="https://codepen.io/shen30000/pen/zYpMeYe" target="_blank">
+                    <img class="project-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg" alt="project">
+                    <p>Documentation</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="profile-link">
+        <h1>Let's work together...</h1>
+        <p>How do you take your coffee?</p>
+        <a href="https://github.com/Shen30000" target="_blank">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAflBMVEX///8AAACgoKDIyMjo6Oj39/fz8/Ps7Oz6+vrW1tbc3NxlZWXh4eGTk5Oqqqrj4+NgYGC4uLhERES/v7/Q0NBKSkofHx9UVFR0dHRtbW1ZWVk5OTmGhoazs7N7e3uMjIykpKQuLi4aGho9PT0TExMzMzMlJSWZmZlHR0cbGxvBBp07AAAJeklEQVR4nO2dbVviOhCGtyBgQVDeRFAQlIXd//8Hj4BIadOZZ5JJwp4r91cx5Cltknntr1+JRCKRSCQSiUQikUiEpdV57OZ53u0+tmNPRZV2PuyvFq/b7Jrt59NbY9z9x7V2l2+zjOOpP76LPVErmv0pK64gs5HHnrCI7v6PQN2ZxeAf+S0nb+VHDmfTf4g9fY78zVrdN8/9G/4l242Nq74js2FsJWbynoq8E++390OOPxX1HVjc1uK6fFbWd2DajC3rh6UHeUdGk9jSjox3vgR+MYu/e+SvHvUdmMc9ubbnnvUd2EcUuA6g74vnWI/jw+8wAr94uY8hcB9M34FxcH0d7R2eoxdYoLctkCDo06h5BMXpB9PX8bnHU8wCLTjNSPoOBDnihF1DywQ4jb9EFZhla98CJQ40P6y86mttYuvL/O6MbXsvmiZTbwI7saWd+fy/C/Ql8YYEZtmrB4Ht2KKuGakLvL+NRebCTFthOGsXZa4rMP5GX+VdU+AqthojiuGNQB4nMWqO/0lsJbW0dATe2D5RRGnn9+3VdkHF0LjNVeaMwmpD+SwWzWZzuV/ZpCWgbGdPiwX1gY6rQPIh/FnL8oYH9+nn+/h7+lRywG9XhVTGz9/iBzsNVQ/caFCIOXWpTzr6GAeSsfUi+f3SvfdBfdjJ/0ZbTNUN907DT/W8rIxL5rBsXBTSWWnGa+L8O1b1cS5ahwDjmBz4yfxP+cZFX8M45j39T/brKT1u7aWrHmP/Thcv7/3GYDkcj4fD5WDff5vP/lRNzl7dMYw+dSxsBb7TCuvdz+0fY2s33w+JHNJOvuz3PoARmWOHpSecO49S90bj6+/zQY5FUlqTxuHpnROfJtf0r8VJpuwMt2aQ/9ztCr+tS0Z5uWjQWvhtp69kBt3aDGrLIzOZzCbuxjku/HmeDbAWnMXJhjV7rRcwK7jZWBjDI27Imu3QE6xCsV8qZ4e8MYXiJ5G0yY7c2F0qPbs98COqO51J+PnQu1cFwEZwOtKLARSajuy1tIABhdfMDSTwtZMMCOVbKDkrIfiFL5MlTSHj6XmcAaAsM8HqjuUEie57R7BCFTydGLPTXzwqKsOeP46s0eGgdcbaZLGBsfHPwMs7Y4z9EK6uBY0NoW43viryhNmn4gPG2/ADaGHAsaZwdQItMIsA3BLR/N+QxR53qnN6wgYbeBZ1DXjZsQcHGyus8YRedyjNBkwBDl0BAW4YyFESOz6EL/McQvNC6jKg3CD9pCse6Fzzxo+D7RVSb6gGnHvzCHCsoaMx34QuYDkBHZf5TRo6PjwG0FMFcK0gDyKSdhDWCXWBd48hBzfkOsWqB0QO4KyDDHmcP0KoMYKUjHNjILtOuAqrMoj/iAsI94Ex4tVXsyGojI+WAse/gLZ9BSBnZ+0+hGpurhBgL+OS+fgRQpSP1QKYBUxcE7E0Q3qCywBOMuYhAnacsPGKMht+gvQAgCkd0k1aBQgZ0S5AIGc9nIfNRIOfIG33AGtV+Nr/IoDpQ6+EwE0QwzS8AJwq6XgKsOE7px07AQQS1+QAQPVPlCYcPwAOKfrYDDhpAkmpg58g7aoBzJNASurgJ0hvZ0B8IJCSOvgJ0mV7/P8nhb7hJ0g7ApPCLGTU0HKG9F0KrDRxezYCOz6tENgt4nZsBLzCtEJgx4/bXBQw8mk3BpCkELMFHpQnQvuRgC6BcS1gILpJG7CA9eRc8OcEEFahEwyQyFNU4wKYH22iI+lQMRdTJMBGzw8JW8RcapBfgA5uIpmqQUtJSiBhYHoEqM1ORJcwMDuuWglRGG/PR3J9uDQRpCA7VpAb2q7Z/RpKroplXkB5UdxCiERIo7m9odRezmON5VYF0VMF6vzOWXdQzkqktQZKZuKvPjRKnEA31EaG362xvP+QtRZnsJ+Qj8GDLxkJoKgMluvNh8awK4VkOSoD9r7lA0dopn5oCwPMZUey9cE2M0GL1X/BTf8QDwT6tp+wOaborJAINdzMOmQ5Arg6YHYPmBSfhUzChBKgD2B9TdGyp3ApfHhzWMz/gJauBZMoaPqHTUjSTjdEYoZgPmixM3ZwO+H/WURySs+gaZOC29T/igqvogfQpwaskv3Gbxd4tLbyCF6Rj2T9F8b1t960ZS0Zcd+D6M7I/KW2ix6XTJSuJRw52/lYcB6k3SYlJZGQP+qKnna6W1veN1WSnm3cY+eDZnNQ/70rTY0t0QpzQlboUnW9vp2DauNad8lca/+/s3qbqWzfqkZoCn+sXwD+aDjhmvjBuG6GCJVluriW3BGOy5VbsULX+mW00gW9aiUWb8F7cpmbDy2jU02HVwnLI2LVp+3qPmfupNf3sSy40ZrsZeeMMnLXmMHUnxUnzYdwtgs06X3Zc39Tq0W0yGRhFBcS/kAFF3wrdH23KcYyls8UXVncMyMornF/w4tVgojxuRhdhuI8mJITgOvLCezifWYFzxeJ9AFdVnkiPycWsXXemk9or9wHTkjdqU5rjW0dT41fsfAsbuq/VLo9QR3ZarBvcFgTEL4cb+rjqfK0Ioft0CGp11xCU7hktQEh+XfBXt8KLmW7Nat4YXetufI2wTfb9xG5tQcw1yMWI8Dm45tN4wwsSaKKY5zP6Du9ipWbFlS797/YCXSN1Zrv06vNvFk93NhtwFavMRf19DRivHdKttiwbEzZGftWr1FWaCRjvLLlD3WWq9kxeLybvTQmluYh2pStiIrL3RT29pNFKxeo01PNeGm95JhKQkJHtPrImE7YXqL44ne4qFUomQ7+PorWpQaG4hxMq42HblhChapJoCbfmn7ZOtAwoYBuWO/e9MYl9V9RpFA7F9t4ttF+FiUK9V8JbAynU6+GsUCg0Ef1ldl+62tujLjCjZfiqxo/w0ovSxFWuPNUXVZrhc+XucpPiSr87a18jkpz374uVl+89EY7615ZoEIfL+U+A/qm/Sr0W1nW2kRX6L1FM+Iv8qkwQII5kCPhUWGQtF3e2eBPYaD8edZ360vhZ7Daznsmxu1Jod8cQdFc/CgM3JGyS73A1ofCafiyTiLxxYPCteLMYSa1P6O6wlGsNnh1fhVthTFqAb/pmBdVXYWruF3+xqacE02F03idp88YQox6Cp/j9hI9U3kctRRuIz6AJfY+FG5uR9+BwVZBYfGGH8Vsqm1mPHVWeInGqiVU63J3Tj+33Z+//UAfjch9/SiahxY59gUmh0u0ivX2DBinA1brNu/ORCKRSCQSiUQikUj8+/wHSNl/2zqZ2LkAAAAASUVORK5CYII=" alt="github icon">
+            GitHub
+        </a>
+    </section>
+</body>
+</html>
